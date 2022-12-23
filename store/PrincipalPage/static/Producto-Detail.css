@@ -1,0 +1,93 @@
+:root{
+    --gris-botones: rgb(177, 175, 175);
+    --Negro-principal: #121212;
+    --Blanco-principal:#f2f2f2;
+}
+.Producto-Detail-content{
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    gap: 4rem;
+}
+.Display-Details{
+
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:.5rem;
+    justify-content: center;
+    text-align: center;
+    margin-right: .5rem;
+
+}
+.Buy-Producto-Detail{
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.IMGDetail{
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Nombre-Producto-Detail{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.Price-Producto-Detail{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.Descipcion{
+    margin-left: 1rem;
+}
+.Cantidad{
+
+    text-align: center;
+}
+.Cantidad-Producto{
+    text-align: center;
+    height: 2rem;
+    width: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border-style: solid;
+}
+.Detail-Agregar-Carrito{
+    height: 3rem;
+    border-radius: 2rem;
+    color:var(--Blanco-principal) ;
+    background-color: var(--Negro-principal);
+}
+.Detail-Agregar-Carrito:hover{
+    height: 3rem;
+    border-radius: 2rem;
+    background-color:gray;
+    border: none;
+}
+.Detail-Favoritos{
+    height: 3rem;
+    border-radius: 2rem;
+    color:var(--Negro-principal) ;
+    background-color: var(--Blanco-principal);
+    border-color: gray;
+    border-style: solid;
+}
+.Detail-Favoritos:hover{
+    height: 3rem;
+    border-radius: 2rem;
+    color:var(--Negro-principal) ;
+    background-color: var(--Blanco-principal);
+    border-color: black;
+    border-style: solid;
+}
+.Envio{
+    margin-top: 1rem;
+    text-decoration: underline;
+}
