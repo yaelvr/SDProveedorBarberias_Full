@@ -1,0 +1,5 @@
+main.py
+.idea
+*venv
+**/PrincipalPage/migrations
+**/PrincipalPage/__init__.py
