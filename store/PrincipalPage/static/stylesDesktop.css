@@ -1,0 +1,271 @@
+:root{
+    --gris-botones: rgb(177, 175, 175);
+    --Negro-principal: #121212;
+    --Blanco-principal:#f2f2f2;
+}
+*{
+    font-family: Helvetica;
+    font-size: 1rem;
+
+}
+section{
+    padding:  4rem 4rem ;
+
+
+}
+
+
+
+body{
+    position:absolute;width:100%;margin-top: 0px;margin-left: 0px;margin-right: 0px;
+    background-color: var(--Blanco-principal);
+    display: grid;
+    grid-template-rows: 100px 5fr 1fr;
+}
+/*..............Menu Mobile.............*/
+.Mobile-Menu-Slide{
+    background-color: var(--Blanco-principal);
+    position: fixed;
+    width: 320px;
+    height: 100vh;
+    z-index: 2;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: -320px;
+    transition: 300ms;
+}
+.Mobile-Menu-Open{
+    margin-right: 0;
+}
+.BTN-Cerrar{
+    margin-top: 1rem;
+    width: 70px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    right: 0;
+    margin-left: auto;
+}
+.Productos-Menu{
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--Blanco-principal);
+}
+.Productos-Menu:hover{
+    box-shadow:   10PX 10PX 3PX gold;
+    -webkit-text-stroke-color:gold;
+    -webkit-text-stroke-width:0.2px;
+}
+/*.............Barra Desktop................*/
+.Barra-Desktop{
+   background-color: #121212;
+   display: grid;
+   grid-template-columns: 1fr 4fr 1fr;
+   grid-template-rows: 100px;
+   height: 100px;
+   gap: 1rem;
+}
+.Logo{
+    height: 100%;
+    width: 100%;
+    background-color:var(--Negro-principal);
+    border: none;
+    color: var(--Blanco-principal);
+    cursor: pointer;
+}
+.Productos-y-Busqueda{
+    display: flex;
+    justify-content: flex-end;
+}
+.Lista-Productos{
+    background-color: var(--Negro-principal);
+    display: inline-flex;
+}
+.Contenido-Productos{
+    list-style: none;
+    line-height: 100px;
+    cursor: pointer;
+
+}
+.Productos{
+    background-color: var(--Negro-principal);
+    border: none;
+    color: var(--Blanco-principal);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.Contenido-Productos:hover{
+    border-bottom:  6px solid goldenrod!important;
+}
+.Contenido-Productos:hover .dropdown{
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    background-color: var(--Blanco-principal);
+}
+.dropdown{
+    position: relative;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0,0,0.2);
+}
+.dropdown button{
+    background-color: var(--Blanco-principal);
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    z-index: 100;
+
+}
+.dropdown button:hover{
+    background-color: var(--gris-botones);
+}
+/*-------------------------------------*/
+.Contenedor-Busqueda{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 2rem;
+    transition: 300ms;
+}
+.Busqueda-Abierta{
+    transition: 300ms;
+    flex: 1 ;
+}
+.Lupa-Desktop{
+    grid-area: 1/1/2/2;
+    z-index: 1;
+}
+.Input-Busqueda{
+    grid-area: 1/1/2/3;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 44px;
+    background-color: var(--Blanco-principal);
+}
+.Input-Expandido{
+    padding-left: 44px !important;
+}
+
+.Boton-Cancelar{
+    display: none;
+    opacity: 0;
+    height: 40px;
+    border-radius: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    transition: 300ms all ease-in-out;
+}
+.Boton-Cancelar-show{
+    display: initial;
+    opacity: 1;
+    transition: 300ms  ease-in-out;
+}
+.Boton-Cancelar:hover{
+    background-color: var(--gris-botones);
+}
+.Botones-Fav-Car{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Botones-Desktop{
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+}
+.Botones-Desktop:hover{
+    background-color: var(--gris-botones);
+}
+.ClaseNone{display: none !important;}
+
+.Favoritos-Desktop{
+    display: initial;
+}
+.Menu-Desktop{
+    display: none;
+}
+.Baner{
+    justify-content: center;
+
+
+}
+.Lay-out-Productos{
+    right:0;
+    left: auto;
+    max-width: 97%;
+    position: relative;
+
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 2rem;
+}
+.Baner-img{
+    max-width: 100%;
+    max-height: 400px;
+    position: relative;
+}
+.Pdisplay{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+.Pdisplay:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+.Producto-IMG{
+    width: 100%;
+    height: 100%;
+}
+.Producto-title{
+    color: rgb(211, 18, 18);
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+.Producto-precio{
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+/*...............Media Querys.................*/
+
+@media (min-width: 0px) and (max-width: 1025px) {
+    .Barra-Desktop{
+        gap: 0;
+    }
+    .Input-Busqueda{
+        padding-left: 0%;
+    }
+    .Lista-Productos{
+        display: none;
+    }
+    .Contenedor-Busqueda{
+        width: 40px;
+    }
+    .Favoritos-Desktop{
+        display: none;
+    }
+    .Menu-Desktop{
+        display: initial;
+    }
+}
+
+
+
