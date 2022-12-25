@@ -79,7 +79,7 @@ fetch('https://dummyjson.com/products?limit=10&skip=10&select=title,price')
       div.className="Pdisplay";
 
       let img=document.createElement("img");
-      img.src="https://http2.mlstatic.com/D_NQ_NP_752567-MLV46793543522_072021-F.jpg";
+      img.src="https://scontent.fmex33-1.fna.fbcdn.net/v/t39.30808-6/316427918_639458301242783_1718732512287865668_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=jqyCbEOJw8AAX_oUnBb&_nc_ht=scontent.fmex33-1.fna&oh=00_AfBUzer7u2QJyVRiXbbsdSCx_SJ-ybWo7ljMuu-m_wiIFQ&oe=63AA4B08";
       img.className="Producto-IMG";
 
       let label=document.createElement("label");

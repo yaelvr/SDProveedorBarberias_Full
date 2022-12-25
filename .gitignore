@@ -3,3 +3,5 @@ main.py
 *venv
 
 **/PrincipalPage/__init__.py
+**/Productos/__pycache__
+**/Productos/migrations/__pycache__
