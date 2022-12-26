@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from PrincipalPage.views import Home, Producto
+from PrincipalPage.views import Home, Productox, Productos_Existencia
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('most-relevant',Productos_Existencia),
     path('',Home),
-    path('1',Producto),
+    path('1',Productox),
 ]
