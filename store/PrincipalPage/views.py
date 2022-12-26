@@ -19,3 +19,7 @@ def Productos_Existencia(request):
     else:
         data = {'message': "Product Not Found"}
     return JsonResponse(data)
+
+def showDetail(request,id):
+    producto=Producto.objects.get(pk=id)
+    return render(request, 'Producto-Details.html',{'producto': producto})

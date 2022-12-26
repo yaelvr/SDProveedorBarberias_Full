@@ -103,20 +103,15 @@
 
     <section class="Producto-Detail-content">
         <div class="Display-Details">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_752567-MLV46793543522_072021-F.jpg" class="IMGDetail">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_752567-MLV46793543522_072021-F.jpg" class="IMGDetail">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_752567-MLV46793543522_072021-F.jpg" class="IMGDetail">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_752567-MLV46793543522_072021-F.jpg" class="IMGDetail">
+            <img src={{producto.image_url}} class="IMGDetail">
+            <img src={{producto.image_url}} class="IMGDetail">
+            <img src={{producto.image_url}} class="IMGDetail">
+            <img src={{producto.image_url}} class="IMGDetail">
         </div>
         <div class="Buy-Producto-Detail">
-            <label class="Nombre-Producto-Detail">Peine de Textura</label>
-            <p class="Price-Producto-Detail">$300</p>
-            <p class="Descipcion">
-                Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Numquam distinctio quia magnam doloribus odit
-                placeat nulla deserunt debitis quisquam dolorum architecto quibusdam
-                in illo magni laboriosam quasi, facilis minima labore?
-            </p>
+            <label class="Nombre-Producto-Detail">{{producto.nombre}}</label>
+            <p class="Price-Producto-Detail">${{producto.precio}}</p>
+            <p class="Descipcion">{{producto.descripcion}}</p>
             <label class="Cantidad">Cantidad </label>
             <input type="number" placeholder="1" class="Cantidad-Producto">
             <button class="Detail-Agregar-Carrito">Agregar al Carrito</button>

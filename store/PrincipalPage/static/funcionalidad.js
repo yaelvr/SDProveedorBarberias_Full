@@ -64,8 +64,13 @@ fetch('./most-relevant')
     original_data = JSON.parse(JSON.stringify(data.productos));
     console.log(original_data);
     for(index of original_data){
+      let url=document.createElement("a")
+      url.href="./prodcut-detail/"+index.id+"";
+      console.log(index.id)
       let div=document.createElement("div");
-      div.className="Pdisplay";
+      div.className="Pdisplay"
+      div.id="Pdisplay"
+      div.setAttribute("onclick", "");
 
       let img=document.createElement("img");
       img.src=index.image_url;
@@ -82,7 +87,8 @@ fetch('./most-relevant')
       div.append(img);
       div.append(label);
       div.append(label2);
-      document.getElementById("Lay-out-Productos").appendChild(div);
+      url.append(div);
+      document.getElementById("Lay-out-Productos").appendChild(url);
       //console.log(index.title)
    }
 });
