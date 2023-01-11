@@ -1,7 +1,7 @@
 main.py
 .idea
 *venv
-
+gitscript.py
 **/PrincipalPage/__init__.py
 **/Productos/__pycache__
 **/Productos/migrations/__pycache__

@@ -10,10 +10,21 @@
 }
 section{
     padding:  4rem 4rem ;
-
-
 }
 
+
+.Logo-link:hover{
+color:white;
+text-decoration: none;
+}
+.Logo-link:link{
+color:white;
+text-decoration: none;
+}
+.Logo-link:visited{
+color:white;
+text-decoration: none;
+}
 
 
 body{
@@ -179,6 +190,18 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+.Mall-Link:link{
+    text-decoration: none;
+    color:black;
+}
+
+.Mall-Link:active{
+    color:black;
+}
+.Mall-Link:visited {
+  color: black;
+}
+
 .Botones-Desktop{
     height: 40px;
     width: 40px;

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
 <head>
+    {% load livereload_tags %}
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" Contenido-Productos="IE=edge">
-    <meta name="viewport" Contenido-Productos="width=device-width, initial-scale=1.0">
-    <!--Estilos-->
-
-    <link rel="stylesheet" type="text/css" href="{% static 'stylesDesktop.css'%} ">
-    <link rel="stylesheet" type="text/css" href="{% static 'Producto-Detail.css'%}">
-    <!--ICONOS-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,-25" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Sd Proveedor de Barberias</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Estilos-->
+     <link rel="stylesheet" type="text/css" href="{% static 'carrito.css'%}">
+     <link rel="stylesheet" type="text/css" href="{% static 'stylesDesktop.css'%}">
+     <!--ICONOS-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,-25" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Carrito</title>
+    {% livereload_script %}
 </head>
-
 <body>
     <div class="Mobile-Menu-Slide" id="Mobile-Menu-Slide">
         <button class="Productos-Menu BTN-Cerrar" id="BTN-Cerrar">Cerrar</button>
@@ -29,7 +29,7 @@
     </div>
 
     <nav class="Barra-Desktop">
-        <button class="Logo">SD Proveedor Barberias</button>
+        <a class="Logo-link" href="./"><button class="Logo">SD Proveedor Barberias</button></a>:
         <div class="Productos-y-Busqueda">
         <div class="Lista-Productos" id="Lista-Productos">
                 <div class="Wahl-C Contenido-Productos">
@@ -91,8 +91,8 @@
         </div>
             <div class="Botones-Fav-Car">
                 <button class="Boton-Cancelar " id="Boton-Cancelar">Cancelar</button>
-                <button class="Botones-Desktop" id="Carrito"><i
-                        class="material-symbols-outlined ">local_mall</i></button>
+                <button class="Botones-Desktop" id="Carrito"><a class="Mall-Link" href="./2"><i
+                        class="material-symbols-outlined " >local_mall</i></a></button>
                 <button class="Botones-Desktop Favoritos-Desktop" id="Favoritos-Desktop"><i class="material-icons "
                         style="font-size:25px;">favorites</i></button>
                 <button class="Botones-Desktop Menu-Desktop" id="Menu-Desktop"><i class="material-icons "
@@ -100,37 +100,29 @@
             </div>
 
     </nav>
+    <div class="container">
 
-    <section class="Producto-Detail-content">
-        <div class="Display-Details">
-            <img src={{producto.image_url}} class="IMGDetail">
-            <img src={{producto.image_url}} class="IMGDetail">
-            <img src={{producto.image_url}} class="IMGDetail">
-            <img src={{producto.image_url}} class="IMGDetail">
+        <div class="ProductosComprar" id="ProductosComprar">
+            <h1 class="Upper-Tittle">Carrito de compra</h1>
         </div>
-        <div class="Buy-Producto-Detail">
-            <label class="Nombre-Producto-Detail">{{producto.nombre}}</label>
-            <p class="Price-Producto-Detail">${{producto.precio}}</p>
-            <p class="Descipcion">{{producto.descripcion}}</p>
-            <label class="Cantidad">Cantidad </label>
-             <select class="Cantidad-Producto">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-            <button class="Detail-Agregar-Carrito">Agregar al Carrito</button>
-            <button class="Detail-Favoritos">Favoritos</button>
-            <label class="Envio">Envios</label>
-            <p class="Detalle-Envios">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ab non magnam aut, quia quis suscipit sint qui cupiditate
-                amet modi saepe id velit ullam enim veniam, repellat obcaecati
-                commodi molestias!</p>
+        <div class="resumen">
+            <h1 class="Upper-Tittle">Resumen</h1>
+            <div class="Subtotal prices">
+                <label>Subtotal</label>
+                <label id="sub-price">$0</label>
+
+            </div>
+            <div class="Total prices">
+                <label class="total">Total</label>
+                <label id="total">$0</label>
+            </div>
+            <button class="Comprar-btn" id="Comprar-btn">Comprar</button>
         </div>
-    </section>
-    <!--SCRIPTS-->
+    </div>
+
+    <!--Script-->
     <script src="{% static 'Nav-Bar.js'%}"></script>
     <script src="{% static 'Producto-Detail.js'%}"></script>
+    <script src="{% static 'carrito.js'%}"></script>
 </body>
-
 </html>
