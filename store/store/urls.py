@@ -21,7 +21,7 @@ from PrincipalPage.views import Home, Productox, Productos_Existencia, showDetai
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('most-relevant',Productos_Existencia),
-    path('',Home),
+    path('',Home,name='HOME'),
     path('1',Productox),
     path('prodcut-detail/<int:id>',showDetail),
     path('carrito-prueba',CarritoPrueba),

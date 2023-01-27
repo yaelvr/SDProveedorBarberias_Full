@@ -8,7 +8,8 @@
     <meta name="viewport" Contenido-Productos="width=device-width, initial-scale=1.0">
     <!--Estilos-->
     <link rel="stylesheet" type="text/css" href="{% static 'css/stylesDesktop.css'%} ">
-     <link rel="stylesheet" type="text/css" href="{% static 'css/carrito.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/carrito.css'%}">
+    {% block estilo %}{% endblock %}
     <!--ICONOS-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,-25" />
@@ -28,7 +29,7 @@
     </div>
 
     <nav class="Barra-Desktop">
-        <a class="Logo-link" href="./"><button class="Logo">SD Proveedor Barberias</button></a>
+        <a class="Logo-link" href="{%url 'HOME'%}"><button class="Logo">SD Proveedor Barberias</button></a>
         <div class="Productos-y-Busqueda">
         <div class="Lista-Productos" id="Lista-Productos">
                 <div class="Wahl-C Contenido-Productos">
