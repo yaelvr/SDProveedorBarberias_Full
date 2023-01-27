@@ -1,4 +1,4 @@
-const nf = new Intl.NumberFormat("en-US", {
+const nf = new Int.NumberFormat("en-US", {
    style: "currency",
    currency: "USD",
    maximumFractionDigits: 0,

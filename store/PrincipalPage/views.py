@@ -32,6 +32,7 @@ def showDetail(request, id):
 def Carrito(request):
     return render(request, 'carrito.html')
 
+
 def CarritoPrueba(request):
     productos = list(Producto.objects.values())
     data={'productos': productos}
